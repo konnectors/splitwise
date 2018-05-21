@@ -10,10 +10,11 @@
   "vendor_link": "Link to the target website",
   "categories": ["other"],
   "fields": {
-    "login": {
-      "type": "text"
+    "consumerKey": {
+      "type": "text",
+      "login": true
     },
-    "password": {
+    "consumerSecret": {
       "type": "password"
     },
     "advancedFields": {
@@ -28,18 +29,9 @@
   ],
   "screenshots": [ "screenshots/screenshot1.png" ],
   "permissions": {
-    "bank operations": {
-      "type": "io.cozy.bank.operations"
-    },
-    "bills": {
-      "type": "io.cozy.bills"
-    },
-    "files": {
-      "type": "io.cozy.files"
-    },
-    "accounts": {
-      "type": "io.cozy.accounts",
-      "verbs": ["GET"]
+    "splitwiseExpenses": {
+      "type": "com.splitwise.expenses",
+      "verbs": ["GET", "POST"]
     }
   },
   "developer": {
