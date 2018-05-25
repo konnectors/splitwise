@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "name": "Splitwise Connector",
+  "type": "konnector",
+  "language": "node",
+  "icon": "icon.png",
+  "slug": "splitwise",
+  "source": "git://github.com/konnectors/splitwise.git",
+  "editor": "Cozy",
+  "vendor_link": "https://splitwise.com",
+  "categories": ["other"],
+  "fields": {
+    "consumerKey": {
+      "type": "text",
+      "login": true
+    },
+    "consumerSecret": {
+      "type": "password"
+    }
+  },
+  "data_types": [
+    "bill"
+  ],
+  "screenshots": [],
+  "permissions": {
+    "splitwiseExpenses": {
+      "type": "com.splitwise.expenses",
+      "verbs": ["GET", "POST"]
+    }
+  },
+  "developer": {
+    "name": "Cozy Cloud",
+    "url": "https://cozy.io"
+  },
+  "langs": ["fr", "en"],
+  "locales": {
+    "fr": {
+      "short_description": "Connecteur Splitwise",
+      "long_description": "Ce connecteur récupère vos dépenses Splitwise",
+      "permissions": {
+        "splitwiseExpenses": {
+          "description": "Utilisé pour créer les dépenses Splitwise"
+        }
+      }
+    },
+    "en": {
+      "short_description": "Connector template",
+      "long_description": "This template fetches a list of books from a scraping website",
+      "permissions": {
+        "splitwiseExpenses": {
+          "description": "Used to create Splitwise expenses"
+        }
+      }
+    }
+  }
+}
