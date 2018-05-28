@@ -44,8 +44,8 @@
       }
     },
     "en": {
-      "short_description": "Connector template",
-      "long_description": "This template fetches a list of books from a scraping website",
+      "short_description": "Splitwise Connector",
+      "long_description": "This connector fetches your splitwise expenses",
       "permissions": {
         "splitwiseExpenses": {
           "description": "Used to create Splitwise expenses"
