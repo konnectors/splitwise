@@ -8,7 +8,7 @@
   "source": "git://github.com/konnectors/splitwise.git",
   "editor": "Cozy",
   "vendor_link": "https://splitwise.com",
-  "categories": ["other"],
+  "categories": ["online_services"],
   "fields": {
     "consumerKey": {
       "type": "text",
