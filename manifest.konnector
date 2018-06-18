@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Splitwise Connector",
+  "name": "Splitwise",
   "type": "konnector",
   "language": "node",
   "icon": "icon.png",
