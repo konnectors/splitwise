@@ -38,7 +38,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "4.6.0",
     "cozy-app-publish": "0.10.5",
-    "cozy-jobs-cli": "1.7.1",
+    "cozy-jobs-cli": "1.7.5",
     "eslint": "5.13.0",
     "eslint-config-cozy-app": "0.10.0",
     "git-directory-deploy": "1.5.1",
@@ -46,7 +46,7 @@
     "konitor": "0.10.1",
     "rxjs": "6.4.0",
     "rxjs-compat": "6.4.0",
-    "webpack": "4.29.2",
+    "webpack": "4.29.3",
     "webpack-cli": "3.2.3"
   }
 }
