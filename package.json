@@ -46,7 +46,7 @@
     "konitor": "0.10.1",
     "rxjs": "6.4.0",
     "rxjs-compat": "6.4.0",
-    "webpack": "4.29.4",
+    "webpack": "4.29.5",
     "webpack-cli": "3.2.3"
   }
 }
