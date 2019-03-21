@@ -36,7 +36,7 @@
     "splitwise": "^1.0.0"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "4.6.0",
+    "copy-webpack-plugin": "5.0.1",
     "cozy-app-publish": "0.15.0",
     "cozy-jobs-cli": "1.7.15",
     "eslint": "5.15.3",
