@@ -4,7 +4,10 @@ node_js:
 env:
   global:
   - DEPLOY_REPOSITORY="git@github.com:konnectors/splitwise.git"
+  # REGISTRY_TOKEN(editor=cozy, app=splitwise)
   - secure: pYrQXMG+FoVCGMuawHhkTKlXjgGDBM5KMYCO1U6yeN51k34srY+Q0p9FvMIWoEoZNWBppu1YBYjzM/zUg++d9S12XnabKo2zYkZhr06FVsgTfe/0V5zBYQsDupLjwtbxp5EJvb4pcYyrN8rI5DQdLtumhlbUnDjsfRGQ/U1WLXrURwcGgHsNNqqE+O9Uf9I7KUF6wAQ3Wc8bSbiuefPD/G9PE/6/3hP9IahErVogxOsS2kD5B1ug2GMY5sshUHxhnP/paY5rllroxXPhC+dvsQrzWkEWZjPu0Uu9hHlCpBc/CvbBmpzDpRwDH1m4t7TfcYr+yCfScTvkywESh9Ad76CIYdqKOGng+gnz/FxvEon8IXX9lbyQhoZTXnXYaTWWBathAPOO8G4UoWksnafHcHhp8QtpvgHErG/5FsjcU8mZc6xsodwKMg8jZC+XM0GUQzJ9kbryNXldMruJ5caqtqDx6H53Q0IJhJkIfDHTFC9aF4++nhwsX9k0sLUPIZZq7bzHMMpcPkvzo+cfum8xQ8or4w9WAEiPQgKGTj+rEIQvsYqqihF9ZxQVhytDG+M/Gnc5G1+pkcLnW6J5xXnIlX5eWP/fm57Gpb1re6fgfZtPKFLjfEpzII8MG4sRbq6tTTWgSZp5ahPxH+C+Hp6ERncWWWBfYHDE/tBfNjKvUTw=
+  # MATTERMOST_HOOK_URL
+  - secure: rmAhyL9fxdKpx4mMjz3Qa6tz8Lu4yKCNX+6qzocjWowjt3Rw44yCFOCAGMmNF9mhlJQFyp1FhbRCpsJ+TZfH9HoXnhxo5ZbIdPyL89mgBqzDvTHM+2oi/8naGHohxgY+0Q7fsFHl9RGiIxHCWJsuPcvzjHQAxxZBdVRWp/u7Xkh877Er2NSGfNMVTbpzsdDmI52Eehrk7UTQIz5VH0e/4nYOJ1HmbA2CPbS+FKher+/e+c8n7H6jM3+tdKOaCay8s0GND0ebSr1iRIhexhOFnBrTgObeUuxVOqx9/o98XZ3khfZIFz88xtWfip8xCwmR1Agb2eu5jeKElVMmiErh9IICI99YKPTALd1m9B0tCXHZ6K8LHiTWajLbXo8GSBDdX3exouByNMxv8y3KJFFZ8J3Dua83k2dLG/qvXPTxAvQ+ges0b7QshIJguqr8bgWBAsfmfIcgJnVU+rUmzhWOiEnuixfnVMcfrKas/5YABpNC1VR1R9Eoa5eg32Gps8QzVn76W6+ZCZkviT8XT5wYfB/gR98fLfvsIHbEuSy0RwherBYrHE5hD3D+sJut3qEMCuv8kaDSRkyI6xPFeNpbMkSbC2QPnF21wTlOvBBxQWuUY5ohLHfYGyGU+etcMeHrAIxjBcYYCMuwXbxklVkGkmswj6/tCscJ3s+kUWe3zR0=
 cache:
   yarn: true
   directories:
@@ -16,7 +19,6 @@ branches:
 script:
 - yarn lint
 - yarn build
-- yarn run check
 deploy:
 - provider: script
   skip-cleanup: true
@@ -25,7 +27,7 @@ deploy:
     branch: master
 - provider: script
   skip-cleanup: true
-  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish
+  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish --postpublish mattermost
   on:
     tags: true
 before_install:
